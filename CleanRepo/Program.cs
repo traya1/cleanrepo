@@ -803,6 +803,7 @@ namespace CleanRepo
 
             Console.WriteLine($"\nFound {deleted}{count} orphaned .png/.jpg/.gif/.svg files:\n");
             Console.WriteLine(output.ToString());
+            Console.WriteLine($"\nFound {deleted}{count} orphaned .png/.jpg/.gif/.svg files:\n");
             Console.WriteLine("DONE");
         }
 
