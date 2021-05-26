@@ -45,7 +45,7 @@ This command-line tool helps you clean up a DocFx-based content repo. It can:
                          '.
 
   --docset-root          The full path to the root directory for the docset,
-                         e.g. 'c:\users\gewarren\dotnet-docs\docs'.
+                         e.g. 'C:\users\gewarren\dotnet-docs\docs'.
 
   -s, --recursive        (Default: True) Search directory and all
                          subdirectories for markdown, yaml, image, and include
@@ -58,37 +58,37 @@ This command-line tool helps you clean up a DocFx-based content repo. It can:
 Find orphaned topics recursively (that is, in the specified directory and any subdirectories):
 
 ```
-CleanRepo.exe --orphaned-topics -d c:\repos\visualstudio-docs-pr\docs\ide
+CleanRepo.exe --orphaned-topics -d C:\repos\visualstudio-docs-pr\docs\ide
 ```
 
 Find orphaned topics non-recursively (that is, only in the specified directory):
 
 ```
-CleanRepo.exe --orphaned-topics -s false -d c:\repos\visualstudio-docs-pr\docs\ide
+CleanRepo.exe --orphaned-topics -s false -d C:\repos\visualstudio-docs-pr\docs\ide
 ```
 
 Find and delete orphaned .png/.gif/.jpg/.svg files (recursive):
 
 ```
-CleanRepo.exe --orphaned-images -g -d c:\repos\visualstudio-docs-pr\docs\ide --docset-name visualstudio
+CleanRepo.exe --orphaned-images -g -d C:\repos\visualstudio-docs-pr\docs\ide --docset-name visualstudio
 ```
 
 Find and delete shared markdown files that are orphaned (recursive):
 
 ```
-CleanRepo.exe --orphaned-includes -g -d c:\repos\visualstudio-docs-pr\docs\ide
+CleanRepo.exe --orphaned-includes -g -d C:\repos\visualstudio-docs-pr\docs\ide
 ```
 
 Clean the .openpublishing.redirection.json file by replacing any redirect URLs with their respective redirect URL, if it exists:
 
 ```
-CleanRepo.exe --clean-redirects --docset-name visualstudio --docset-root c:\repos\visualstudio-docs-pr\docs
+CleanRepo.exe --clean-redirects --docset-name visualstudio --docset-root C:\repos\visualstudio-docs-pr\docs
 ```
 
 Find topics with backlinks to redirected topics and replace the links with their target URL:
 
 ```
-CleanRepo.exe --replace-redirects -d c:\repos\visualstudio-docs-pr\docs\ide
+CleanRepo.exe --replace-redirects -d C:\repos\visualstudio-docs-pr\docs\ide
 ```
 
   > [!TIP]
@@ -97,13 +97,13 @@ CleanRepo.exe --replace-redirects -d c:\repos\visualstudio-docs-pr\docs\ide
 Replace site-relative links to the specified docset with file-relative links, when the file exists (includes image links):
 
 ```
-CleanRepo.exe --relative-links --docset-name visualstudio --docset-root c:\repos\visualstudio-docs-pr\docs -d c:\repos\visualstudio-docs-pr\docs\ide
+CleanRepo.exe --relative-links --docset-name visualstudio --docset-root C:\repos\visualstudio-docs-pr\docs -d C:\repos\visualstudio-docs-pr\docs\ide
 ```
 
 Search recursively for topics that appear more than once in a TOC file:
 
 ```
-CleanRepo.exe -m -d c:\repos\visualstudio-docs-pr\docs\ide
+CleanRepo.exe -m -d C:\repos\visualstudio-docs-pr\docs\ide
 ```
 
 ## Future functionality ideas...
